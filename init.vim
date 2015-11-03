@@ -69,10 +69,6 @@ set undofile
 let &backupdir = expand('$XDG_RUNTIME_DIR')
 let &directory = expand('$XDG_RUNTIME_DIR')
 
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-
 set mouse=a
 set number
 
