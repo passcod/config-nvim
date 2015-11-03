@@ -64,6 +64,10 @@ let g:clipbrdDefaultReg = '+'
 let &undodir = expand('~/.config/nvim/undo')
 set undofile
 
+" Central location for backup and swap files
+let &backupdir = expand('$XDG_RUNTIME_DIR')
+let &directory = expand('$XDG_RUNTIME_DIR')
+
 set expandtab
 set shiftwidth=2
 set softtabstop=2
