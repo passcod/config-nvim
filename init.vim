@@ -31,6 +31,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'slim-template/vim-slim'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-fugitive'
