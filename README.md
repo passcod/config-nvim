@@ -7,4 +7,4 @@
     git clone https://github.com/junegunn/vim-plug
     cd vim-plug
     ln -s . autoload
-    nvim +PlugInstall +qall
+    nvim +PlugInstall
