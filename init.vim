@@ -10,6 +10,9 @@ call plug#begin(expand('~/.config/nvim/plugged/'))
 "     cd ~/.config/nvim/plugged/vim-plug; ln -s . autoload
 Plug 'junegunn/vim-plug'
 
+" 'Normalize.vim' at the top...
+Plug 'tpope/vim-sensible'
+
 Plug 'airblade/vim-gitgutter'
 Plug 'digitaltoad/vim-jade'
 Plug 'elzr/vim-json'
@@ -39,7 +42,6 @@ Plug 'tpope/vim-obsession' | Plug 'dhruvasagar/vim-prosession'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
-Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-ruby/vim-ruby'
@@ -69,6 +71,7 @@ set undofile
 let &backupdir = expand('$XDG_RUNTIME_DIR')
 let &directory = expand('$XDG_RUNTIME_DIR')
 
+set autoindent
 set mouse=a
 set number
 
