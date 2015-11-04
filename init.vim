@@ -32,7 +32,6 @@ Plug 'othree/html5.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'slim-template/vim-slim'
-Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-fugitive'
@@ -74,6 +73,10 @@ let &backupdir = expand('$XDG_RUNTIME_DIR')
 let &directory = expand('$XDG_RUNTIME_DIR')
 
 set autoindent
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+
 set mouse=a
 set number
 
