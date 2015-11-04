@@ -32,8 +32,6 @@ Plug 'othree/html5.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'slim-template/vim-slim'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-characterize'
@@ -47,6 +45,10 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-ruby/vim-ruby'
 Plug 'wavded/vim-stylus'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" Those apparently require Python support???
+"Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 call plug#end()
 
