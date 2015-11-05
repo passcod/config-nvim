@@ -28,6 +28,7 @@ Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'moll/vim-node'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'othree/html5.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
@@ -57,9 +58,8 @@ map <C-n> :NERDTreeToggle<CR>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-" open a NERDTree automatically when vim starts up if no files were specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" Strip trailing whitespace on save
+autocmd BufWritePre * StripWhitespace
 
 set grepprg=ag\ --line-numbers\ $*
 let g:clipbrdDefaultReg = '+'
