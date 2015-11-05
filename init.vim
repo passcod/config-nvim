@@ -58,6 +58,8 @@ map <C-n> :NERDTreeToggle<CR>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|node_modules)$'
+
 " Strip trailing whitespace on save
 autocmd BufWritePre * StripWhitespace
 
