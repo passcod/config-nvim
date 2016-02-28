@@ -1,3 +1,5 @@
+set t_Co=256
+
 if has('vim_starting')
   set runtimepath+=~/.config/nvim/plugged/vim-plug/
 endif
@@ -15,6 +17,7 @@ Plug 'tpope/vim-sensible'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'digitaltoad/vim-jade'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
@@ -22,7 +25,7 @@ Plug 'groenewege/vim-less'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'itchyny/lightline.vim'
 Plug 'jayflo/vim-skip'
-Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install --all' } | Plug 'junegunn/fzf.vim'
 Plug 'klen/python-mode'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
@@ -54,17 +57,14 @@ call plug#end()
 
 nnoremap <C-u> :UndotreeToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-p> :FZF<CR>
 
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
-let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|node_modules)$'
+" Make sure editorconfig plays nice with others
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 " Strip trailing whitespace on save
+" Maybe remove? (taken care of by editorconfig?)
 autocmd BufWritePre * StripWhitespace
-
-set grepprg=ag\ --line-numbers\ $*
-let g:clipbrdDefaultReg = '+'
 
 " Persistent undo history
 let &undodir = expand('~/.config/nvim/undo')
@@ -81,6 +81,7 @@ set softtabstop=2
 
 set mouse=a
 set number
+set grepprg=ag\ --line-numbers\ $*
 
 set ignorecase
 set smartcase
