@@ -55,6 +55,12 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
 
+" Don't show `-- INSERT --` when Lightline already does
+set noshowmode
+
+" Nice understated theme
+let g:lightline = { 'colorscheme': 'seoul256' }
+
 nnoremap <C-u> :UndotreeToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <C-p> :FZF<CR>
