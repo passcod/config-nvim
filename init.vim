@@ -50,8 +50,8 @@ Plug 'wavded/vim-stylus'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Those apparently require Python support???
-"Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 call plug#end()
 
@@ -80,6 +80,9 @@ set undofile
 let &backupdir = expand('$XDG_RUNTIME_DIR')
 let &directory = expand('$XDG_RUNTIME_DIR')
 
+" When using `J` or `gqip`, don't double-space sentences
+set nojoinspaces
+
 set autoindent
 set expandtab
 set shiftwidth=2
@@ -87,7 +90,7 @@ set softtabstop=2
 
 set mouse=a
 set number
-set grepprg=ag\ --line-numbers\ $*
+set grepprg=rg\ --line-number\ $*
 
 set ignorecase
 set smartcase
