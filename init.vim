@@ -20,38 +20,32 @@ Plug 'digitaltoad/vim-jade'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
-Plug 'fatih/vim-go'
 Plug 'groenewege/vim-less'
 Plug 'hail2u/vim-css3-syntax'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'jayflo/vim-skip'
 Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install --all' } | Plug 'junegunn/fzf.vim'
 Plug 'klen/python-mode'
-Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'moll/vim-node'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'othree/html5.vim'
+Plug 'othree/yajs.vim'
 Plug 'rust-lang/rust.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'slim-template/vim-slim'
+Plug 'scrooloose/nerdtree' | Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession' | Plug 'dhruvasagar/vim-prosession'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rake'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-ruby/vim-ruby'
-Plug 'wavded/vim-stylus'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-
-" Those apparently require Python support???
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'vim-ruby/vim-ruby'
 
 call plug#end()
 
@@ -65,12 +59,11 @@ nnoremap <C-u> :UndotreeToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <C-p> :FZF<CR>
 
+" Use ag to respect .gitignore with Ctrl-P
+let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
+
 " Make sure editorconfig plays nice with others
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
-
-" Strip trailing whitespace on save
-" Maybe remove? (taken care of by editorconfig?)
-autocmd BufWritePre * StripWhitespace
 
 " Persistent undo history
 let &undodir = expand('~/.config/nvim/undo')
