@@ -46,6 +46,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'vim-ruby/vim-ruby'
+Plug 'w0rp/ale'
 
 call plug#end()
 
