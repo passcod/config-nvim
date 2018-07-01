@@ -27,6 +27,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'jayflo/vim-skip'
 Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install --all' } | Plug 'junegunn/fzf.vim'
 Plug 'klen/python-mode'
+Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'moll/vim-node'
 Plug 'mustache/vim-mustache-handlebars'
@@ -53,12 +54,17 @@ call plug#end()
 " Don't show `-- INSERT --` when Lightline already does
 set noshowmode
 
+" Enable True Colour support
+"set termguicolors
+
 " Nice understated theme
 let g:lightline = { 'colorscheme': 'seoul256' }
 
-nnoremap <C-u> :UndotreeToggle<CR>
-map <C-n> :NERDTreeToggle<CR>
 nnoremap <C-p> :FZF<CR>
+
+" Configure Emmet leader
+"let g:user_emmet_leader_key='<C-H>'
+let g:user_emmet_install_global = 1
 
 " Use ag to respect .gitignore with Ctrl-P
 let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
@@ -90,7 +96,7 @@ set ignorecase
 set smartcase
 set hlsearch
 
-" Swap ; and :  Convenient.
+" Swap ; and :
 nnoremap ; :
 nnoremap : ;
 
