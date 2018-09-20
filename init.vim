@@ -22,7 +22,8 @@ Plug 'elzr/vim-json'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'itchyny/lightline.vim'
 Plug 'jayflo/vim-skip'
-"Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install --all' } | Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'
+"Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'moll/vim-node'
 Plug 'mustache/vim-mustache-handlebars'
@@ -40,13 +41,18 @@ call plug#end()
 " Don't show `-- INSERT --` when Lightline already does
 set noshowmode
 
+" Update interval in ms for things like git gutter
+set updatetime=100
+
 " Enable True Colour support
 "set termguicolors
 
 " Nice understated theme
 let g:lightline = { 'colorscheme': 'seoul256' }
 
-nnoremap <C-p> :FZF<CR>
+nnoremap <C-p> :Files<CR>
+nnoremap <C-o> :Buffers<CR>
+nnoremap <C-i> :Rg<space>
 
 " Use ag to respect .gitignore with Ctrl-P
 let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
