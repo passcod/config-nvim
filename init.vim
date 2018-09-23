@@ -50,12 +50,23 @@ set updatetime=100
 " Nice understated theme
 let g:lightline = { 'colorscheme': 'seoul256' }
 
+" Shortcuts for fzf commands: files, open files, in files
 nnoremap <C-p> :Files<CR>
 nnoremap <C-o> :Buffers<CR>
 nnoremap <C-i> :Rg<space>
 
 " Use ag to respect .gitignore with Ctrl-P
 let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
+
+" Store fzf history
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+" Default to open in a new tab, and use ctrl-t for 'same buffer' instead
+let g:fzf_action = {
+  \ '': 'tab split',
+  \ 'ctrl-t': 'e',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
 
 " Make sure editorconfig plays nice with others
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
