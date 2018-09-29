@@ -69,6 +69,10 @@ let g:fzf_action = {
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 
+" Switch tabs using ctrl y and n
+nnoremap <C-n> :tabn<CR>
+nnoremap <C-y> :tabp<CR>
+
 " Make sure editorconfig plays nice with others
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
