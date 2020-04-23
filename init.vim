@@ -30,6 +30,7 @@ Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'moll/vim-node'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nkouevda/vim-thrift-syntax'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'othree/html5.vim'
@@ -94,6 +95,24 @@ let g:loaded_tar = 1
 
 " When using `J` or `gqip`, don't double-space sentences
 set nojoinspaces
+
+" Make syntax highlighting more efficient.
+syntax sync fromstart
+
+" Always run rustfmt as applicable and always use stable.
+let g:rustfmt_autosave_if_config_present = 1
+let g:rustfmt_command = "rustfmt +stable"
+
+" Mappings for coc (lsp handler)
+nmap <Leader>gt <Plug>(coc-type-definition)
+nmap <Leader>gre <Plug>(coc-references)
+nmap <Leader>grn <Plug>(coc-rename)
+nmap <Leader>gd <Plug>(coc-diagnostic-info)
+nmap <Leader>gp <Plug>(coc-diagnostic-prev)
+nmap <Leader>gn <Plug>(coc-diagnostic-next)
+
+" Default is 4000ms, which is ridiculous
+set updatetime=300
 
 set autoindent
 set expandtab
