@@ -41,6 +41,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession' | Plug 'dhruvasagar/vim-prosession'
 Plug 'tpope/vim-projectionist'
 Plug 'vim-ruby/vim-ruby'
+Plug 'vmchale/dhall-vim'
 
 call plug#end()
 
