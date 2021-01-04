@@ -25,6 +25,7 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'jayflo/vim-skip'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
@@ -114,6 +115,9 @@ nmap <Leader>gn <Plug>(coc-diagnostic-next)
 
 " Default is 4000ms, which is ridiculous
 set updatetime=300
+
+" Hybrid relative numbering by default
+:set number relativenumber
 
 set autoindent
 set expandtab
