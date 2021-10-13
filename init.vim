@@ -16,6 +16,7 @@ Plug 'junegunn/vim-plug'
 Plug 'tpope/vim-sensible'
 
 Plug 'airblade/vim-gitgutter'
+Plug 'andweeb/presence.nvim'
 Plug 'cespare/vim-toml'
 Plug 'digitaltoad/vim-jade'
 Plug 'editorconfig/editorconfig-vim'
