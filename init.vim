@@ -121,6 +121,7 @@ nmap <Leader>gn <Plug>(coc-diagnostic-next)
 " Lua configs
 lua require('configs.notify')
 lua require('configs.noice')
+" TODO: port configs https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua/
 
 " Default is 4000ms, which is ridiculous
 set updatetime=300
