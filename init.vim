@@ -22,6 +22,7 @@ Plug 'digitaltoad/vim-jade'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'elzr/vim-json'
+Plug 'folke/noice.nvim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'itchyny/lightline.vim'
@@ -33,12 +34,14 @@ Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'moll/vim-node'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'MunifTanjim/nui.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nkouevda/vim-thrift-syntax'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'othree/html5.vim'
 Plug 'othree/yajs.vim'
 Plug 'posva/vim-vue'
+Plug 'rcarriga/nvim-notify'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession' | Plug 'dhruvasagar/vim-prosession'
@@ -55,7 +58,7 @@ set noshowmode
 set updatetime=100
 
 " Enable True Colour support
-"set termguicolors
+set termguicolors
 
 " Nice understated theme
 let g:lightline = { 'colorscheme': 'seoul256' }
@@ -114,6 +117,10 @@ nmap <Leader>grn <Plug>(coc-rename)
 nmap <Leader>gd <Plug>(coc-diagnostic-info)
 nmap <Leader>gp <Plug>(coc-diagnostic-prev)
 nmap <Leader>gn <Plug>(coc-diagnostic-next)
+
+" Lua configs
+lua require('configs.notify')
+lua require('configs.noice')
 
 " Default is 4000ms, which is ridiculous
 set updatetime=300
