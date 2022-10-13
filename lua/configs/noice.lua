@@ -1,2 +1,12 @@
 local noice = require("noice")
-noice.setup();
+noice.setup({
+  routes = {
+    {
+      filter = {
+        event = "cmdline",
+        find = "^%s*[/?]",
+      },
+      view = "cmdline",
+    },
+  },
+});
