@@ -22,7 +22,7 @@ Plug 'digitaltoad/vim-jade'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'elzr/vim-json'
-Plug 'folke/noice.nvim'
+" Plug 'folke/noice.nvim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'itchyny/lightline.vim'
@@ -41,7 +41,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'othree/html5.vim'
 Plug 'othree/yajs.vim'
 Plug 'posva/vim-vue'
-Plug 'rcarriga/nvim-notify'
+" Plug 'rcarriga/nvim-notify'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession' | Plug 'dhruvasagar/vim-prosession'
@@ -119,8 +119,8 @@ nmap <Leader>gp <Plug>(coc-diagnostic-prev)
 nmap <Leader>gn <Plug>(coc-diagnostic-next)
 
 " Lua configs
-lua require('configs.notify')
-lua require('configs.noice')
+" lua require('configs.notify')
+" lua require('configs.noice')
 " TODO: port configs https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua/
 
 " Default is 4000ms, which is ridiculous
